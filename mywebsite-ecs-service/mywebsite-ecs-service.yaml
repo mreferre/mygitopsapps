@@ -1,0 +1,17 @@
+apiVersion: ecs.services.k8s.aws/v1alpha1
+kind: Service
+metadata:
+  name: mywebsite-ecs-serviceddd
+spec:
+  serviceName: mywebsite-ecs-serviceddd
+  taskDefinition: mywebsite-task-definitionddd
+  cluster: cluster-team-redddd
+  launchType: FARGATE
+  desiredCount: 3
+  networkConfiguration:
+    awsvpcConfiguration:
+      assignPublicIP: ENABLED
+      securityGroups:
+      - sg-00befbceb4e648574
+      subnets:
+      - subnet-05768c86f85f5b699
