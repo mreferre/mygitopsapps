@@ -1,11 +1,11 @@
 apiVersion: ecs.services.k8s.aws/v1alpha1
 kind: Service
 metadata:
-  name: mywebsite-ecs-serviceddd
+  name: mywebsite-ecs-service
 spec:
-  serviceName: mywebsite-ecs-serviceddd
-  taskDefinition: mywebsite-task-definitionddd
-  cluster: cluster-team-redddd
+  serviceName: mywebsite-ecs-service
+  taskDefinition: mywebsite-task-definition
+  cluster: cluster-team-red
   launchType: FARGATE
   desiredCount: 3
   networkConfiguration:
